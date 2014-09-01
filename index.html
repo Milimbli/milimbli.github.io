@@ -1,37 +1,32 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8" />
+    <title>Phonograph - פונוגרף</title>
+	
+	
+    <!-- Main CSS -->
+	<link rel="stylesheet" type="text/css" href="styles/style.css" />
+	<link rel="stylesheet" type="text/css" href="styles/mobile.css" id='mobile-css'  media="only screen and (max-device-width: 480px)" //>
+	<link rel="stylesheet" type="text/css" href="styles/perfect-scrollbar.css">	
+	
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+    <meta name="description" content="אתר הבית של להקת פונוגרף -  וידאו, תמונות, הורדות, אירועים וכל מה שפונוגרף." />
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <meta property="og:site_name" content="פונוגרף" />
+    <meta property="og:title" content="פונוגרף - אתר הבית" />
+    <meta property="og:description" content="וידאו | הורדות | עלינו | תמונות | אירועים | עוד מאיתנו " />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.phonograph.co.il" />
+    <meta property="og:image" content="http://www.phonograph.co.il/images/fb-share.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+	
+</head>
+<body>
+	Hello World!
+</body>
+</html>
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
